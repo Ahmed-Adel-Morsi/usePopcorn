@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+# usePopcorn
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React movie search and watchlist application that lets users discover films via the OMDb API, inspect details, rate movies, and maintain a persistent watched list in local storage.
+
+## Live Demo
+
+Deployed at: **https://ahmed-adel-morsi.github.io/usePopcorn**
+
+## Features
+
+- Search movies with live API results (minimum 3 characters).
+- View detailed movie information (plot, cast, director, runtime, genre, release date, IMDb rating).
+- Rate movies with a reusable star rating component.
+- Add rated movies to a watched list.
+- Remove movies from the watched list.
+- Persist watched list data in `localStorage`.
+- Display watched-list analytics:
+  - Total watched movies
+  - Average IMDb rating
+  - Average user rating
+  - Average runtime
+- Keyboard shortcuts:
+  - `Enter` focuses the search input and clears current query.
+  - `Escape` closes selected movie details.
+
+## Tech Stack
+
+- React (Create React App)
+- JavaScript (ES6+)
+- Custom React hooks
+- CSS
+- OMDb API
+- gh-pages (deployment)
+
+## Project Structure
+
+```text
+src/
+	App.js                # Main UI and app flow
+	StarRating.js         # Reusable rating component
+	useKey.js             # Keyboard shortcut hook
+	useLocalStorage.js    # Local storage persistence hook
+	useMovies.js          # Movie fetching hook with abort handling
+	index.css             # App styling
+	index.js              # React entry point
+```
+
+## Getting Started
+
+### 1) Install dependencies
+
+```bash
+npm install
+```
+
+### 2) Run in development
+
+```bash
+npm start
+```
+
+Open `http://localhost:3000` in your browser.
 
 ## Available Scripts
 
-In the project directory, you can run:
+- `npm start` — Runs the app in development mode.
+- `npm test` — Launches the test runner.
+- `npm run build` — Builds the app for production.
+- `npm run deploy` — Deploys the production build to GitHub Pages.
 
-### `npm start`
+## API
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This app consumes data from the [OMDb API](https://www.omdbapi.com/).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Credits
 
-### `npm test`
+This project is inspired by the React course by **Jonas Schmedtmann** and was built as part of hands-on learning and practice.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## License
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is for educational purposes.
