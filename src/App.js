@@ -7,7 +7,7 @@ import { useKey } from "./useKey";
 const average = (arr) =>
   arr.reduce((acc, cur, i, arr) => acc + cur / arr.length, 0);
 
-const KEY = "5836e50d";
+const KEY = process.env.REACT_APP_API_KEY;
 
 export default function App() {
   const [query, setQuery] = useState("");
@@ -95,7 +95,7 @@ function Logo() {
   return (
     <div className="logo">
       <span role="img">🍿</span>
-      <h1>usePopcorn</h1>
+      <h1>usePopcornnnnnnnnnnnn</h1>
     </div>
   );
 }
